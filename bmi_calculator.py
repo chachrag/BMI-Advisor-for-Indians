@@ -3,8 +3,8 @@ import numpy as np
 
 
 st.write('**Enter height**')
-ft_selector = st.number_input('ft', min_value=0, max_value=10, step=1)
-in_selector = st.number_input('in', min_value=0, max_value=11, step=1)
+ft_selector = st.selectbox('ft', min_value=0, max_value=10, step=1)
+in_selector = st.selectbox('in', min_value=0, max_value=11, step=1)
 
 
 
