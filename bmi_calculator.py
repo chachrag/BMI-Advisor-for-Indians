@@ -2,7 +2,9 @@ import streamlit as st
 import numpy as np
 
 st.title('Body Mass Index Advisor for Indians 🇮🇳')
-st.write('')
+st.write('Traditional BMI ranges do not apply to people of Indian ethnicity. This calculator uses the revised guidelines for India.')
+st.markdown("***")
+
 st.write('**Enter height**')
 ft_selector = st.selectbox('ft', options=[0, 1, 2, 3, 4, 5, 6, 7, 8])
 in_selector = st.selectbox('in', options=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
