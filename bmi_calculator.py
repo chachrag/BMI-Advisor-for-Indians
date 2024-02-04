@@ -1,6 +1,9 @@
 import streamlit as st
 import numpy as np
 
+st.set_page_config(page_title='BMI Advisor for Indians')
+
+
 if 'clicked' not in st.session_state:
     st.session_state.clicked = False
 
