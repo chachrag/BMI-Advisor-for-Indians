@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 
-st.title('Body Mass Index Advisor for Indians')
+st.title('Body Mass Index Advisor for Indians :🇮🇳:')
 st.write('')
 st.write('**Enter height**')
 ft_selector = st.selectbox('ft', options=[0, 1, 2, 3, 4, 5, 6, 7, 8])
@@ -28,9 +28,8 @@ if st.session_state.clicked:
 
     if height_m != 0:
         text_placeholder = st.empty()
-        text_placeholder.text('BMI = ____')
         st.write('')
-        st.write('**Enter weight**')
+        st.write('**Select weight**')
         initial_weight = np.round(((21*height_m**2)*2)/2)
         kg_selector = st.slider('kg', min_value=20., max_value=150., step=0.5, value=initial_weight, key='kg_selector')
         bmi = np.round(st.session_state.kg_selector/(height_m**2), 1)
@@ -45,5 +44,5 @@ if st.session_state.clicked:
             bmi_category = 'Obese'
 
         bmi_text_color = st.session_state.bmi_color_dict[bmi_category]
-        text_placeholder.write(f":{bmi_text_color}[**BMI = {bmi} ({bmi_category})**]")
+        text_placeholder.write(f":{bmi_text_color}[**BMI: {bmi} - ({bmi_category})**]")
 
