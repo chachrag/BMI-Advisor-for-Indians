@@ -38,7 +38,7 @@ if st.session_state.clicked:
 
     if height_m != 0:
         markdown_placeholder.markdown("***")
-        weight_text_placeholder.write('**Select any weight from the slider**')
+        weight_text_placeholder.write('**Select any weight (in kg) from the slider**')
         initial_weight = np.round(((21*height_m**2)*2)/2)
         kg_selector_placeholder.slider('kg', min_value=20., max_value=150., step=0.5, value=initial_weight, key='kg_selector')
         bmi = np.round(st.session_state.kg_selector/(height_m**2), 1)
